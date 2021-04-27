@@ -35,7 +35,8 @@ spec:
 
   steps:
     - name: git-clone
-      image: docker.io/alpine/git:v2.26.2
+      #image: docker.io/alpine/git:v2.26.2
+      image: registry.redhat.io/openshift-pipelines/pipelines-git-init-rhel8@sha256:6a9ebfc7d780e57d12f5ac686359effc2d3f0757af3462f05ff35fb64fcc052a
       workingDir: $(workspaces.workspace.path)
       script: |
         rm -rf git-update-digest-workdir
@@ -54,7 +55,8 @@ spec:
         cat kustomization.yaml
 
     - name: git-commit
-      image: docker.io/alpine/git:v2.26.2
+      #image: docker.io/alpine/git:v2.26.2
+      image: registry.redhat.io/openshift-pipelines/pipelines-git-init-rhel8@sha256:6a9ebfc7d780e57d12f5ac686359effc2d3f0757af3462f05ff35fb64fcc052a
       workingDir: $(workspaces.workspace.path)
       script: |
         cd git-update-digest-workdir
