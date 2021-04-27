@@ -5,7 +5,7 @@ metadata:
   name: gogs-postgresql
   annotations:
     image.openshift.io/triggers: >-
-        [{"from":{"kind":"ImageStreamTag","name":"postgresql:latest", "namespace":"openshift"},"fieldPath":"spec.template.spec.containers[?(@.name==\"postgresql\")].image"}]
+        [{"from":{"kind":"ImageStreamTag","name":"postgresql-12:latest", "namespace":"openshift"},"fieldPath":"spec.template.spec.containers[?(@.name==\"postgresql\")].image"}]
   labels:
     app: gogs
     app.kubernetes.io/component: database
