@@ -74,8 +74,8 @@ spec:
       - spring-petclinic
       - -Dsonar.host.url=http://sonarqube.sva-tooling.svc.cluster.local:9000
       - -Dsonar.userHome=/tmp/sonar
-      - - Dsonar.login=admin
-      - - Dsonar.password=admin123
+      - -Dsonar.login=admin
+      - -Dsonar.password=admin123
       - -DskipTests=true
       - -Dcheckstyle.skip
   - name: release-app
