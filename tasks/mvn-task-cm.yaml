@@ -23,25 +23,25 @@ data:
           <password>admin123</password>
         </server>
         <server>
-      <id>nexus-snapshots</id>
-      <username>admin</username>
-      <password>admin123</password>
-    </server>
-    <server>
-      <id>nexus-releases</id>
-      <username>admin</username>
-      <password>admin123</password>
-    </server>
-    <server>
-         <id>maven-snapshots</id>
-         <username>admin</username>
-         <password>admin123</password>
-  </server>
-  <server>
-         <id>maven-releases</id>
-         <username>admin</username>
-         <password>admin123</password>
-  </server>
+          <id>nexus-snapshots</id>
+          <username>admin</username>
+          <password>admin123</password>
+        </server>
+        <server>
+          <id>nexus-releases</id>
+          <username>admin</username>
+          <password>admin123</password>
+        </server>
+        <server>
+          <id>maven-snapshots</id>
+          <username>admin</username>
+          <password>admin123</password>
+        </server>
+        <server>
+          <id>maven-releases</id>
+          <username>admin</username>
+          <password>admin123</password>
+        </server>
       </servers>
       <mirrors>
         <mirror>
