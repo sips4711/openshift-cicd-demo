@@ -12,7 +12,7 @@ data:
           <username>admin</username>
           <password>admin123</password>
         </server>
-                <server>
+        <server>
           <id>spring-snapshots</id>
           <username>admin</username>
           <password>admin123</password>
