@@ -75,6 +75,7 @@ spec:
       - -Dsonar.host.url=http://sonarqube:9000
       - -Dsonar.userHome=/tmp/sonar
       - -DskipTests=true
+      - -Dcheckstyle.skip
   - name: release-app
     taskRef:
       name: maven
