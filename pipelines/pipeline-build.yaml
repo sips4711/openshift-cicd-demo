@@ -98,6 +98,7 @@ spec:
       - -DskipTests=true
       - -DaltDeploymentRepository=nexus::default::http://nexus.sva-tooling.svc.cluster.local:8081/repository/maven-releases/
       - -DaltSnapshotDeploymentRepository=nexus::default::http://nexus.sva-tooling.svc.cluster.local:8081/repository/maven-snapshots/
+      - -DaltReleaseDeploymentRepository=nexus::default::http://nexus.sva-tooling.svc.cluster.local:8081/repository/maven-releases/
   - name: build-image
     taskRef:
       name: s2i-java-11
