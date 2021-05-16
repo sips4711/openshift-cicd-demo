@@ -69,7 +69,7 @@ spec:
     - name: GOALS
       value:
       - install
-      - admin:admin123
+      - sonar:sonar
       - -f
       - spring-petclinic
       - -Dsonar.host.url=http://sonarqube.sva-tooling.svc.cluster.local:9000
