@@ -40,6 +40,7 @@ spec:
       workingDir: $(workspaces.workspace.path)
       script: |
         rm -rf git-update-digest-workdir
+        git config --global http.sslVerify false
         git clone $(params.GIT_REPOSITORY) git-update-digest-workdir
 
     - name: update-digest
@@ -62,6 +63,7 @@ spec:
         cd git-update-digest-workdir
         git config user.email "tekton-pipelines-ci@redhat.com"
         git config user.name "tekton-pipelines-ci"
+        git config --global http.sslVerify false
 
         git status
         git add $(params.KUSTOMIZATION_PATH)/kustomization.yaml
