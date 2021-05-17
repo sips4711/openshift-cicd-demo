@@ -103,7 +103,7 @@ spec:
         - $(params.IMAGE_NAME):$(params.IMAGE_TAG)
         - '-t'
         - $(params.IMAGE_NAME):latest
-         - '-t'
+        - '-t'
         - 'nexus-registry-sva-tooling.apps.lab3.tiab.ssc.sva.de/sebastianzoll/petclinic:latest'
         - .
       image: >-
