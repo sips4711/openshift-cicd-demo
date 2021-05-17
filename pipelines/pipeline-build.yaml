@@ -7,7 +7,7 @@ spec:
     - name: APP_SOURCE_GIT
       type: string
       description: The application git repository
-      default: https://github.com/sips4711/spring-petclinic
+      default: https://github.com/sips4711/petclinic
     - name: APP_SOURCE_REVISION
       type: string
       description: The application git revision
@@ -15,7 +15,7 @@ spec:
     - name: APP_MANIFESTS_GIT
       type: string
       description: The application manifests git repository
-      default: https://github.com/sips4711/spring-petclinic-config
+      default: https://github.com/sips4711/petclinic-config
     - name: APP_IMAGE_TAG
       type: string
       default: latest
