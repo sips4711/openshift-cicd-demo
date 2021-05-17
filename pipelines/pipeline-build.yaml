@@ -42,6 +42,8 @@ spec:
       value: spring-petclinic
     - name: deleteExisting
       value: "true"
+    - name: sslVerify
+      value: 'false'
   - name: unit-tests
     taskRef:
       name: maven
