@@ -19,18 +19,17 @@ spec:
       template:
         name: petclinic-trigger-template
 ---
-apiVersion: route.openshift.io/v1
 kind: Route
+apiVersion: route.openshift.io/v1
 metadata:
-  name: el-webhook
-  labels:
-    app.kubernetes.io/managed-by: EventListener
-    app.kubernetes.io/part-of: Triggers
-    eventlistener: webhook
+  name: el-webhook-szoll-pipetest
+  namespace: szoll-pipetest
 spec:
-  port:
-    targetPort: 8080
   to:
-    kind: "Service"
+    kind: Service
     name: el-webhook
     weight: 100
+  port:
+    targetPort: http-listener
+  wildcardPolicy: None
+
