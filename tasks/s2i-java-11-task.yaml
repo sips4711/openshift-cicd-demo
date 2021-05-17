@@ -103,6 +103,8 @@ spec:
         - $(params.IMAGE_NAME):$(params.IMAGE_TAG)
         - '-t'
         - $(params.IMAGE_NAME):latest
+         - '-t'
+        - 'nexus-registry-sva-tooling.apps.lab3.tiab.ssc.sva.de/sebastianzoll/petclinic:latest'
         - .
       image: >-
         registry.redhat.io/rhel8/buildah@sha256:180c4d9849b6ab0e5465d30d4f3a77765cf0d852ca1cb1efb59d6e8c9f90d467
@@ -129,6 +131,26 @@ spec:
       volumeMounts:
         - mountPath: /var/lib/containers
           name: varlibcontainers
+
+    - image: >-
+        registry.redhat.io/rhel8/buildah@sha256:180c4d9849b6ab0e5465d30d4f3a77765cf0d852ca1cb1efb59d6e8c9f90d467
+      name: push-tag-test
+      resources: {}
+      script: >
+        #!/bin/bash
+
+
+        echo admin123 | buildah login --tls-verify=$(params.TLSVERIFY) -u admin
+        --password-stdin nexus-registry-sva-tooling.apps.lab3.tiab.ssc.sva.de
+
+
+        buildah push  --storage-driver=vfs  --tls-verify=$(params.TLSVERIFY)  
+        --digestfile   $(workspaces.source.path)/image-digest
+        nexus-registry-sva-tooling.apps.lab3.tiab.ssc.sva.de/sebastianzoll/petclinic:latest
+      volumeMounts:
+        - mountPath: /var/lib/containers
+          name: varlibcontainers
+
     - command:
         - buildah
         - push
