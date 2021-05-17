@@ -131,7 +131,7 @@ spec:
       - name: GIT_USERNAME
         value: gogs
       - name: GIT_PASSWORD
-        value: gogs
+        value: admin123
       - name: CURRENT_IMAGE
         value: quay.io/siamaksade/spring-petclinic:latest
       - name: NEW_IMAGE
