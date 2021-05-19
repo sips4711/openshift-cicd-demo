@@ -22,8 +22,7 @@ spec:
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: el-webhook-szoll-pipetest
-  namespace: szoll-pipetest
+  name: el-webhook
 spec:
   to:
     kind: Service
